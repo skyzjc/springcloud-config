@@ -6,9 +6,9 @@ spring:
       primary: offer
       datasource:
         offer:
-          username: ${user-db.name}
-          password: ${user-db.pwd}
-          url: jdbc:mysql://${user-db.ip-port}/ex55-spot-dev-a?useSSL=false&rewriteBatchedStatements=true
+          username: root
+          password: root
+          url: jdbc:mysql://127.0.0.1/ex55-spot-dev-a?useSSL=false&rewriteBatchedStatements=true
           driver-class-name: com.mysql.cj.jdbc.Driver
 
 eureka:
@@ -18,15 +18,8 @@ eureka:
     service-url:
 #      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
       defaultZone: http://eureka7001.com:7001/eureka
-  instance:
-    instance-id: payment8002
-    prefer-ip-address: true
 
 logging:
   level:
     root: info
     com.jason.springcloud: info
-
-#mybatis-plus:
-#  configuration:
-#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
